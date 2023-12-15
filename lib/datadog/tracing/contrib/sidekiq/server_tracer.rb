@@ -40,7 +40,7 @@ module Datadog
             Datadog::Tracing.trace(
               Ext::SPAN_JOB,
               service: service,
-              span_type: Datadog::Tracing::Metadata::Ext::AppTypes::TYPE_WORKER,
+              type: Datadog::Tracing::Metadata::Ext::AppTypes::TYPE_WORKER,
               on_error: @error_handler
             ) do |span|
               span.resource = resource
